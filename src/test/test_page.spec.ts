@@ -9,4 +9,11 @@ describe('page', async () => {
     expect(html).toContain('layout.default')
     expect(html).toContain('page.index')
   })
+
+  test('custom', async () => {
+    const html = await $fetch('/custom')
+    debugger
+    expect(html).toContain('layout.custom')
+    expect(html).toContain('page.custom')
+  })
 })
